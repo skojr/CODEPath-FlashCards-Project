@@ -28,12 +28,22 @@
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.flashcard:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.flashcard:active {
+  transform: scale(0.95);
+}
+
 h1, h2 {
   text-align: center;
 }
 
 button {
   margin: 10px;
+  cursor: pointer;
 }
 
 .green {

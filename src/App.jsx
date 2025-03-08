@@ -19,11 +19,7 @@ function App() {
   const [index, setIndex] = useState(0);
 
   const onNextClick = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % flashcards.length);
-  };
-
-  const onPrevClick = () => {
-    setIndex((prevIndex) => (prevIndex - 1 + flashcards.length) % flashcards.length);
+    setIndex(() => Math.floor(Math.random() * 10));   
   };
 
   return (
@@ -37,12 +33,6 @@ function App() {
         color={flashcards[index].color} 
       />
       <div className="button-container">
-        <button 
-          className="button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
-          onClick={onPrevClick}
-        >
-          Previous
-        </button>
         <button 
           className="button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
           onClick={onNextClick}
